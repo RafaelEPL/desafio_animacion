@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --black: #1c1c1c;
+  --gray: gray;
+  --light: rgb(192, 192, 192);
+  --white: #fff;
+  --bt: blue;
+  --footer: black;
+}
+
+
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "nav"
+    "main"
+    "main"
+    "footer";
+}
+
+nav {
+  grid-area: nav;
+  background-color: var(--footer);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  color: var(--light);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  transform: rotateY(360deg);
+  transition: 3s;
+  animation: gira 5s linear infinite;
+}
+
+@keyframes gira {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+main {
+  grid-area: main;
+  background-color: var(--black);
+}
+
+.principal {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  overflow-y: scroll;
+  height: 76vh;
+}
+
+
+
+.autos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: -1px 16px 18px -6px rgba(0, 0, 0, 0.75);
+  margin: 10px;
+  width: 70vw;
+  height: 50vh;
+  flex-wrap: wrap;
+  background-size: cover;
+}
+
+.autos:first-child {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../img/electric-car.jpg");
+}
+
+.autos:nth-child(2) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../img/electric-car.jpg");
+}
+
+.autos:nth-child(3) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../img/electric-car.jpg");
+}
+
+.autos:nth-child(4) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../img/electric-car.jpg");
+}
+
+.autos:nth-child(5) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../img/electric-car.jpg");
+}
+
+.autos:nth-child(6) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../img/electric-car.jpg");
+}
+
+.autos:nth-child(7) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../img/electric-car.jpg");
+}
+
+.autos:nth-child(8) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("../img/electric-car.jpg");
+}
+
+
+
+.data {
+  text-align: center;
+}
+
+.data .titulo {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.data .parrafo {
+  color: var(--gray);
+}
+
+
+
+.principal button {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--white);
+  width: 30vw;
+  height: 8vh;
+  border-radius: 5px;
+  font-size: 21px;
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.principal button::before {
+  content: "";
+  position: absolute;
+  width: 50vw;
+  height: 30vh;
+  border-radius: 5px;
+  background-image: conic-gradient(white 20deg, transparent 120deg);
+  animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.principal button::after {
+  content: "";
+  position: absolute;
+  width: 28vw;
+  height: 6vh;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.principal button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--light);
+  transform: scale(1.25);
+  transition: 1.5s;
+}
+
+.principal button p {
+  z-index: 1;
+  margin: auto;
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--footer);
+  color: white;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 576px) {
+  body {
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "nav nav"
+      "main main"
+      "main main"
+      "footer footer";
+  }
+  nav {
+    align-items: center;
+    grid-area: nav;
+    background-color: var(--footer);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .principal {
+    display: grid;
+    height: 70vh;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+
+  .autos {
+    width: 30vw;
+    height: 40vh;
+  }
+
+  .principal button {
+    width: 15vw;
+    height: 7vh;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  body {
+    grid-template-columns: 15% 85%;
+    grid-template-areas:
+      "nav main"
+      "nav main"
+      "nav main"
+      "footer main";
+  }
+
+  nav {
+    background-color: var(--footer);
+  }
+  .principal {
+    height: 100vh;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .autos {
+    width: 18vw;
+    height: 50vh;
+  }
+
+  .principal button {
+    width: 10vw;
+    height: 7vh;
+  }
+
+  nav ul li {
+    margin: 10px;
+  }
+}
